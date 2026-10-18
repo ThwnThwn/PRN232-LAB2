@@ -1,0 +1,59 @@
+{
+  "studentCode": "SE182422",
+  "fullName": "VAN CHAU TRUONG THUAN",
+  "className": "SE1917",
+  "projectName": "LMS",
+  "apiBasePath": "/api/v1",
+  "healthPath": "/health",
+  "swaggerJsonPath": "/swagger/v1/swagger.json",
+  "database": "sqlserver",
+  "resources": {
+    "semesters": "/api/v1/semesters",
+    "courses": "/api/v1/courses",
+    "subjects": "/api/v1/subjects",
+    "students": "/api/v1/students",
+    "enrollments": "/api/v1/enrollments"
+  },
+  "implemented": {
+    "search": true,
+    "sort": true,
+    "paging": true,
+    "selection": true,
+    "expansion": true,
+    "create": true,
+    "update": true,
+    "delete": true,
+    "contentNegotiation": true,
+    "validation": true,
+    "fluentValidation": true,
+    "customValidation": true,
+    "versioning": true,
+    "middleware": true,
+    "jwt": true,
+    "roleAuthorization": true,
+    "refreshToken": true
+  },
+  "knownIds": {
+    "students": 1,
+    "courses": 1,
+    "enrollments": 1,
+    "subjects": 1,
+    "semesters": 1
+  },
+  "notes": "Lab 2 upgrade of Lab 1: URL API versioning, XML/JSON, validation, middleware and JWT security.",
+  "apiVersionBase": "/api/v1",
+  "auth": {
+    "loginPath": "/api/v1/auth/login",
+    "refreshPath": "/api/v1/auth/refresh-token",
+    "adminUsername": "admin",
+    "adminPassword": "Admin@123",
+    "userUsername": "student",
+    "userPassword": "Student@123"
+  },
+  "endpoints": {
+    "protected": "/api/v1/students",
+    "adminOnly": "/api/v1/users",
+    "nested": "/api/v1/courses/1/students",
+    "createTarget": "/api/v1/students"
+  }
+}

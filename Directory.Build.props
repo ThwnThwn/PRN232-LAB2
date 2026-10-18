@@ -1,0 +1,11 @@
+<Project>
+  <!--
+    This repository is often built on machines without Internet access.
+    Disabling the NuGet vulnerability audit avoids failed builds caused by
+    the unreachable https://api.nuget.org service (NU1900) and speeds up
+    restore. It does not change any package or behavior.
+  -->
+  <PropertyGroup>
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+</Project>
